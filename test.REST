@@ -1,13 +1,17 @@
 @hostname = localhost
 @port = 3000
 @host = {{hostname}}:{{port}}
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZTc3NzFjODQ4NDc3NTMxYzg0MjA4ZDAiLCJpYXQiOjE1ODQ4ODYyMTZ9.fOFTYAAHvbPA79rCfyLO9139PmLdOaSAW0JhmovAgZM
 
 ###
 POST http://{{host}}/signup HTTP/1.1
 content-type: application/json
-
 {
-    "email": "test3",
+    "email": "test4",
     "password": "test"
 }
+
+###
+GET http://{{host}}/ HTTP/1.1
+Authorization: Bearer {{token}}
 

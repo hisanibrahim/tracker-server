@@ -6,8 +6,9 @@
 ###
 POST http://{{host}}/signup HTTP/1.1
 content-type: application/json
+
 {
-    "email": "test4",
+    "email": "test5",
     "password": "test"
 }
 

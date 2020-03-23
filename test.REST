@@ -1,14 +1,14 @@
 @hostname = localhost
 @port = 3000
 @host = {{hostname}}:{{port}}
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZTc3NzFjODQ4NDc3NTMxYzg0MjA4ZDAiLCJpYXQiOjE1ODQ4ODYyMTZ9.fOFTYAAHvbPA79rCfyLO9139PmLdOaSAW0JhmovAgZM
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZTc4NzBhYTgxNjZlMDI5ZjQ0MTVlYTEiLCJpYXQiOjE1ODQ5NTE2OTd9.pxrXQrzOl-ADXzvMk81o4Lg1OTv_jg7sYl_MiIJV6BY
 
 ###
 POST http://{{host}}/signup HTTP/1.1
 content-type: application/json
 
 {
-    "email": "test5",
+    "email": "test",
     "password": "test"
 }
 
@@ -16,3 +16,11 @@ content-type: application/json
 GET http://{{host}}/ HTTP/1.1
 Authorization: Bearer {{token}}
 
+###
+POST http://{{host}}/signin HTTP/1.1
+content-type: application/json
+
+{
+    "email": "test",
+    "password": "test"
+}

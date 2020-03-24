@@ -1,7 +1,7 @@
 @hostname = localhost
 @port = 3000
 @host = {{hostname}}:{{port}}
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZTc4NzBhYTgxNjZlMDI5ZjQ0MTVlYTEiLCJpYXQiOjE1ODQ5NTE2OTd9.pxrXQrzOl-ADXzvMk81o4Lg1OTv_jg7sYl_MiIJV6BY
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZTc4NzBhYTgxNjZlMDI5ZjQ0MTVlYTEiLCJpYXQiOjE1ODUwMzkxMjd9.q-JnGhhjK4A5O9Lw2OLq26_4Uy7PEJVLOe-4tiDs12M
 
 ###
 POST http://{{host}}/signup HTTP/1.1
@@ -13,7 +13,7 @@ content-type: application/json
 }
 
 ###
-GET http://{{host}}/ HTTP/1.1
+GET http://{{host}}/tracks HTTP/1.1
 Authorization: Bearer {{token}}
 
 ###

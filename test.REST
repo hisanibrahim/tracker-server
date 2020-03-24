@@ -4,7 +4,7 @@
 @token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZTc4NzBhYTgxNjZlMDI5ZjQ0MTVlYTEiLCJpYXQiOjE1ODUwMzkxMjd9.q-JnGhhjK4A5O9Lw2OLq26_4Uy7PEJVLOe-4tiDs12M
 
 ###
-POST http://{{host}}/signup HTTP/1.1
+POST http://{{host}}/signin HTTP/1.1
 content-type: application/json
 
 {
@@ -17,7 +17,37 @@ GET http://{{host}}/tracks HTTP/1.1
 Authorization: Bearer {{token}}
 
 ###
-POST http://{{host}}/signin HTTP/1.1
+POST http://{{host}}/tracks HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name": "new track",
+    "locations": [
+        {
+        "timestamp": 10000000,
+        "coords": {
+            "latitute":100,
+            "longitude":100,
+            "altitude":100,
+            "accuracy":100,
+            "speed":100
+        }
+        }
+
+    ]
+}
+
+#   timestamp: Number,
+#   coords: {
+#     latitute: Number,
+#     longitude: Number,
+#     altitude: Number,
+#     accuracy: Number,
+#     speed: Number
+#   }
+###
+POST http://{{host}}/signup HTTP/1.1
 content-type: application/json
 
 {

@@ -1,15 +1,13 @@
 @hostname = localhost
 @port = 3000
 @host = {{hostname}}:{{port}}
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZTc4NzBhYTgxNjZlMDI5ZjQ0MTVlYTEiLCJpYXQiOjE1ODUwMzkxMjd9.q-JnGhhjK4A5O9Lw2OLq26_4Uy7PEJVLOe-4tiDs12M
-
-###
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZWEyYjI5MzQwNWQxMWEzMzQzMjMxMmYiLCJpYXQiOjE1ODkxMDExMTJ9.SbGtqIax7f66ClPBsT8It4P-4rwrXN-8rXKtD21ab4g
 POST http://{{host}}/signin HTTP/1.1
 content-type: application/json
 
 {
-    "email": "test",
-    "password": "test"
+    "email": "hisan",
+    "password": "hisan"
 }
 
 ###
@@ -34,18 +32,9 @@ Authorization: Bearer {{token}}
             "speed":100
         }
         }
-
     ]
 }
 
-#   timestamp: Number,
-#   coords: {
-#     latitute: Number,
-#     longitude: Number,
-#     altitude: Number,
-#     accuracy: Number,
-#     speed: Number
-#   }
 ###
 POST http://{{host}}/signup HTTP/1.1
 content-type: application/json

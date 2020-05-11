@@ -3,12 +3,12 @@ const mongoose = require("mongoose");
 const pointSchema = new mongoose.Schema({
   timestamp: Number,
   coords: {
-    latitute: Number,
+    latitude: Number,
     longitude: Number,
     altitude: Number,
     accuracy: Number,
-    speed: Number
-  }
+    speed: Number,
+  },
 });
 
 // parent schema
@@ -16,16 +16,16 @@ const trackSchema = new mongoose.Schema({
   userId: {
     // this is how refer id from another schema
     type: mongoose.Schema.Types.ObjectId,
-    ref: "User"
+    ref: "User",
   },
   name: {
     type: String,
-    default: ""
+    default: "",
   },
 
   // list of point objects to define track, that defined as another schema
   // and embeded in trackSchema
-  locations: [pointSchema]
+  locations: [pointSchema],
 });
 
 // we dont really need to tie pointSchema to mongoose
